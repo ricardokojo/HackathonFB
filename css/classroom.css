@@ -16,6 +16,10 @@ section {
     height: 90vh;
 }
 
+#Chat {
+    background-color: #fff;
+}
+
 html,body
 {
     width: 100%;
@@ -29,13 +33,7 @@ html,body
     padding: 0;
 }
 
-.chat-bottom {
-    position: relative;
-    width: 100%;
-    bottom: 0%;
-}
-
-# TABS
+#TABS
 
  /* Style the tab */
  .tab {
