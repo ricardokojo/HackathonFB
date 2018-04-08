@@ -1,19 +1,16 @@
-function updateScroll(){
-    var out = $("#chattab");
-    var isScrolledToBottom = out.scrollHeight - out.clientHeight <= out.scrollTop + 1;
-    if(isScrolledToBottom)
-        out.scrollTop = out.scrollHeight - out.clientHeight;
-    // $("#chattab").scrollTop = $("#chattab").scrollHeight - $("#chattab").clientHeight;
+function scrollDown() {
+    var objDiv = document.getElementById("chattab");
+    objDiv.scrollTop = objDiv.scrollHeight;
 }
 
-function addMessage(msg, img){
-    var html = "<div class='chat-container'>\
+function addMessage(msg, img, style){
+    var html = "<div class='chat-container "+style+"'>\
         <img src='"+ img +"' alt='Avatar'>\
         <p>"+msg+"</p>\
         <span class='time-right'>"+ getNow() +"</span>\
         </div>";
     $('#chattab').append(html);
-    updateScroll();
+    scrollDown();
 }
 
 function generateMessage(msg, img){
@@ -23,7 +20,7 @@ function generateMessage(msg, img){
         <span class='time-left'>"+ getNow() +"</span>\
         </div>";
     $('#chattab').append(html);
-    updateScroll();
+    scrollDown();
 }
 
 function getNow(){
@@ -36,7 +33,7 @@ function messageGenerator() {
     var messages = [
         "Lorem ipsun e essas paradas",
         "Mensagens geradas automaticamente",
-        "Rodando permutações e tals",
+        "Rodando permutações de frases e avatares e tals",
         "Mas eu não sei o que é permutação",
         "O que o prof disse",
         "Não entendi o ex. 5",
@@ -55,7 +52,31 @@ function messageGenerator() {
 
 window.setInterval(function(){
     messageGenerator();
-  }, 5000);  
+  }, 7000); 
+
+function teste1(){
+    setTimeout(
+    function() 
+    {
+        addMessage("Não lembro. Melhor perguntar pro João.", "images/avatar6.jpeg", "bilhetinho");
+    }, 1000);
+}
+
+function teste2() {
+    setTimeout(
+    function() 
+    {
+        addMessage("É semana que vem. Mesmo dia, 19 horas.", "images/avatar2.png", "bilhetinho");
+    }, 1000);
+}
+
+function teste3() {
+    setTimeout(
+    function() 
+    {
+        addMessage("Sim, exatamente. Esse é o caminho.", "images/avatar1.png", "professor");
+    }, 1000);
+}
 
 $( document ).ready(function() {
     messageGenerator();

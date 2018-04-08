@@ -13,6 +13,16 @@
     background-color: #ddd;
 }
 
+.bilhetinho {
+    background-color: #fff740;
+    border-color: #fff428;
+}
+
+.professor {
+    background-color: #3552f8;
+    border-color: #1332e4;
+}
+
 /* Clear floats */
 .chat-container::after {
     content: "";

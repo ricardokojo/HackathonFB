@@ -22,6 +22,7 @@
                     </div>
                     <div class="col-md-4 no-padding">
                         <button class="tablinks" onclick="openTab(event, 'livevideo')">Ao vivo</button>
+                        <img style="position: relative; left: 40px; bottom: 48px; max-width: 10px;" src="images/recording.gif">
                     </div>
                     <div class="col-md-4 no-padding">
                         <button class="tablinks" onclick="openTab(event, 'liveboard')">Lousa do Professor</button>
@@ -102,7 +103,7 @@
                         </div>
                         
                         <div id="livevideo" class="tabcontent">
-                            <h3>Quem sabe faz ao vivo</h3>
+                            <h3>Quem sabe faz ao vivo (stream aqui)</h3>
                         </div>
                         
                         <div id="liveboard" class="tabcontent">
@@ -188,7 +189,7 @@
     <script src="js/duvidas.js"></script>
     <script>
         $(document).keypress(function(event) {
-            if(event.which == 109) {
+            if(event.which == 92) {
                 if($("#mic").hasClass("mic-off")){
                     $("#mic").removeClass("mic-off");
                     $("#mic").addClass("mic-on");
@@ -212,7 +213,23 @@
                 addDuvida("duvida4", text);
             }
             if($("#tabChat").hasClass("active")) {
-                addMessage(text, "images/faustop.jpg");
+                var style = "";
+                if(~text.indexOf("/b ")) {
+                    style = "bilhetinho";
+                    text = text.slice(3);
+
+                    if(text.indexOf("Joao"))
+                        teste1();
+                    else if(text.indexOf("Maria"))
+                        teste2();
+                } else if(~text.indexOf("/p ")) {
+                    style = "professor";
+                    text = text.slice(3);
+                    teste3();
+                }
+                else style = "";
+
+                addMessage(text, "images/faustop.jpg", style);
             }
         });
     </script>
