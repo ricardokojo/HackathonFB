@@ -24,7 +24,7 @@
                         <button class="tablinks" onclick="openTab(event, 'livevideo')">Ao vivo</button>
                     </div>
                     <div class="col-md-4 no-padding">
-                        <button class="tablinks" onclick="openTab(event, 'liveboard')">Lousa ao vivo</button>
+                        <button class="tablinks" onclick="openTab(event, 'liveboard')">Lousa do Professor</button>
                     </div>
                 </div>
                 <!-- Tab content -->
@@ -34,21 +34,69 @@
                             <div id="classrow" class="row">
                                 <div class="col-md-12">
                                     <img class="ministro pop-in" src="images/avatar1.png">
+                                    <img class="blackboard" src="images/blackboard.png">
                                 </div>
-                                <div class="col-md-2">
+                                <div id="desk1" class="col-md-2 desk" onclick="chooseDesk(this)">
                                     <img class="aluno pop-in" src="images/avatar2.png">
                                 </div>
-                                <div class="col-md-2">
+                                <div id="desk2" class="col-md-2 desk" onclick="chooseDesk(this)">
                                     <img class="aluno pop-in" src="images/avatar3.jpeg">
                                 </div>
-                                <div class="col-md-2">
+                                <div id="desk3" class="col-md-2 desk" onclick="chooseDesk(this)">
                                     <img class="aluno pop-in" src="images/avatar4.jpeg">
                                 </div>
-                                <div class="col-md-2">
+                                <div id="desk4" class="col-md-2 desk" onclick="chooseDesk(this)">
                                     <img class="aluno pop-in" src="images/avatar5.jpeg">
                                 </div>
-                                <div class="col-md-2">
+                                <div id="desk5" class="col-md-2 desk" onclick="chooseDesk(this)">
                                     <img class="aluno pop-in" src="images/avatar6.jpeg">
+                                </div>
+                                <div id="desk6" class="col-md-2 desk" onclick="chooseDesk(this)">
+                                    <img class="aluno pop-in" src="images/blankavatar.png">
+                                </div>
+                                <div id="desk7" class="col-md-2 desk" onclick="chooseDesk(this)">
+                                    <img class="aluno pop-in" src="images/blankavatar.png">
+                                </div>
+                                <div id="desk8" class="col-md-2 desk" onclick="chooseDesk(this)">
+                                    <img class="aluno pop-in" src="images/blankavatar.png">
+                                </div>
+                                <div id="desk9" class="col-md-2 desk" onclick="chooseDesk(this)">
+                                    <img class="aluno pop-in" src="images/blankavatar.png">
+                                </div>
+                                <div id="desk10" class="col-md-2 desk" onclick="chooseDesk(this)">
+                                    <img class="aluno pop-in" src="images/blankavatar.png">
+                                </div>
+                                <div id="desk11" class="col-md-2 desk" onclick="chooseDesk(this)">
+                                    <img class="aluno pop-in" src="images/blankavatar.png">
+                                </div>
+                                <div id="desk12" class="col-md-2 desk" onclick="chooseDesk(this)">
+                                    <img class="aluno pop-in" src="images/blankavatar.png">
+                                </div>
+                                <div id="desk13" class="col-md-2 desk" onclick="chooseDesk(this)">
+                                    <img class="aluno pop-in" src="images/blankavatar.png">
+                                </div>
+                                <div id="desk14" class="col-md-2 desk" onclick="chooseDesk(this)">
+                                    <img class="aluno pop-in" src="images/blankavatar.png">
+                                </div>
+                                <div id="desk15" class="col-md-2 desk" onclick="chooseDesk(this)">
+                                    <img class="aluno pop-in" src="images/blankavatar.png">
+                                </div>
+                                <div id="desk16" class="col-md-2 desk" onclick="chooseDesk(this)">
+                                    <img class="aluno pop-in" src="images/blankavatar.png">
+                                </div>
+                                <div id="desk17" class="col-md-2 desk" onclick="chooseDesk(this)">
+                                    <img class="aluno pop-in" src="images/blankavatar.png">
+                                </div>
+                                <div id="desk18" class="col-md-2 desk" onclick="chooseDesk()">
+                                    <img class="aluno pop-in" src="images/blankavatar.png">
+                                </div>
+                            </div>
+                            <div class="row no-padding" style="margin-top: 20px;">
+                                <div class="offset-md-2 col-md-1 no-padding">
+                                    <img id="mic" class="mic mic-off" src="images/mic-off.png">
+                                </div>
+                                <div class="offset-md-1 col-md-4">
+                                    <button id="questionBtn" class="btn btn-danger" style="width: 100%; height: 100%;">Estou com dúvida!</button>
                                 </div>
                             </div>
                         </div>
@@ -58,13 +106,8 @@
                         </div>
                         
                         <div id="liveboard" class="tabcontent">
-                            <h3>Quase a mesma coisa do outro</h3>
+                            <iframe width="100%" height="100%" src="https://www.youidraw.com/apps/painter/" frameborder="0"></iframe>
                         </div>
-                    </div>
-                </div>
-                <div class="row no-padding">
-                    <div class="offset-md-4 col-md-4 no-padding">
-                        <button id="questionBtn" class="btn btn-danger" style="width: 100%; height: 100%;">Estou com dúvida!</button>
                     </div>
                 </div>
             </div>
@@ -78,7 +121,7 @@
                         <button id="tabDuvida" class="tablinks2" onclick="openTab2(event, 'duvidas')">Dúvidas</button>
                     </div>
                     <div class="col-md-4 no-padding">
-                        <button class="tablinks2" onclick="openTab2(event, 'Lorem')">Lorem</button>
+                        <button class="tablinks2" onclick="openTab2(event, 'myboard')">Lousa do Aluno</button>
                     </div>
                 </div>
                 <!-- Tab content -->
@@ -118,8 +161,8 @@
                             </div>
                         </div>
                         
-                        <div id="Lorem" class="tabcontent2">
-                            <h3>ipsun</h3>
+                        <div id="myboard" class="tabcontent2">
+                            <iframe width="100%" height="100%" src="https://www.youidraw.com/apps/painter/" frameborder="0"></iframe>
                         </div>
                     </div>
                 </div>
@@ -144,6 +187,17 @@
     <script src="js/interactiveclass.js"></script>
     <script src="js/duvidas.js"></script>
     <script>
+        $(document).keypress(function(event) {
+            if(event.which == 109) {
+                if($("#mic").hasClass("mic-off")){
+                    $("#mic").removeClass("mic-off");
+                    $("#mic").addClass("mic-on");
+                    $("#mic").attr("src", "images/mic-on.gif");
+                    alert("Seu microfone foi desmutado pelo professor.");
+                }
+            }
+        });
+
         $("#messageInput").keyup(function(event) {
             if (event.keyCode === 13) {
                 $("#messageBtn").click();

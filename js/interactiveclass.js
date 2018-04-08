@@ -1,13 +1,13 @@
 // QUESTION FEATURE
 
 function question(id) {
-    $("#"+id).append(
+    $("#"+id).parent().append(
         "<img class='question pop-in shake' src='images/hand.png'>"
     );
 }
 
 function questionSolved(id) {
-    $("#"+id+' img').last().remove();
+    $("#"+id).parent().children().last().remove();
 }
 
 // esta com duvida
@@ -31,20 +31,41 @@ $("#questionBtn").click(function() {
         questionSolved("faustop");
         questionbool = false;
         changeQuestionBtn(questionbool);
+        $("#mic").removeClass("mic-on");
+        $("#mic").addClass("mic-off");
+        $("#mic").attr("src", "images/mic-off.png");
     }
 });
 
+// MIC ON AND OFF
+
+
+
 // ADD STUDENTS
 
+var persist_id = null;
 function addStudent(id, img) {
-    var html = "<div id='"+id+"' class='col-md-2' >\
-        <img class='aluno pop-in pop-out' src='"+img+"'>\
-        </div>";
-    $('#classrow').append(html);
+    $("#desk18 img").attr("src", "images/avatar7.jpeg");
 }
 
 function removeStudent() {
-    $('#classrow div').last().remove();
+    $("#desk18 img").attr("src", "images/blankavatar.png");
+}
+
+function chooseDesk(elem){
+    var id = $(elem).attr('id');
+    if($('#'+id+" img").attr("src") === "images/blankavatar.png"){
+        if(persist_id) {
+            $('#'+persist_id+" img").attr("src", "images/blankavatar.png");
+            $('#'+persist_id+" img").attr("id", "");
+        }
+        persist_id = id;
+        $('#'+id+" img").attr("src", "images/faustop.jpg");
+        $('#'+id+" img").attr("id", "faustop");
+    } else {
+        alert("Lugar ocupado");
+        return;
+    }
 }
 
 var add_or_remove = true;
@@ -57,11 +78,3 @@ window.setInterval(function(){
         add_or_remove = true;
     }
   }, 7000); 
-
-$( document ).ready(function() {
-    setTimeout(
-    function() 
-    {
-        addStudent("faustop", "images/faustop.jpg");
-    }, 1500);
-});
