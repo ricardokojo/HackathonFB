@@ -4,6 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/fa-svg-with-js.css">
         <link rel="stylesheet" href="css/classroom.css">
         <link rel="stylesheet" href="css/chat.css">
         <link rel="stylesheet" href="css/interactiveclass.css">
@@ -62,6 +63,11 @@
                         </div>
                     </div>
                 </div>
+                <div class="row no-padding">
+                    <div class="offset-md-4 col-md-4 no-padding">
+                        <button id="questionBtn" class="btn btn-primary" style="width: 100%; height: 100%;">Estou com dúvida!</button>
+                    </div>
+                </div>
             </div>
             <div id="chat" class="col-md-5">
                  <!-- Tab links -->
@@ -70,7 +76,7 @@
                         <button id="defaultOpen2" class="tablinks2" onclick="openTab2(event, 'chattab')">Chat</button>
                     </div>
                     <div class="col-md-4 no-padding">
-                        <button class="tablinks2" onclick="openTab2(event, 'Duvidas')">Dúvidas</button>
+                        <button class="tablinks2" onclick="openTab2(event, 'duvidas')">Dúvidas</button>
                     </div>
                     <div class="col-md-4 no-padding">
                         <button class="tablinks2" onclick="openTab2(event, 'Lorem')">Lorem</button>
@@ -83,14 +89,12 @@
                             
                         </div>
                         
-                        <div id="Duvidas" class="tabcontent2">
-                            <h3>Paris</h3>
-                            <p>Paris is the capital of France.</p>
+                        <div id="duvidas" class="tabcontent2">
+
                         </div>
                         
                         <div id="Lorem" class="tabcontent2">
-                            <h3>Tokyo</h3>
-                            <p>Tokyo is the capital of Japan.</p>
+                            <h3>ipsun</h3>
                         </div>
                     </div>
                 </div>
@@ -107,9 +111,8 @@
         </div>
     </section>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="js/tabs.js"></script>
     <script src="js/chat.js"></script>
     <script src="js/interactiveclass.js"></script>

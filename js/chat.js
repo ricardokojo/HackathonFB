@@ -16,6 +16,16 @@ function addMessage(msg, img){
     updateScroll();
 }
 
+function generateMessage(msg, img){
+    var html = "<div class='chat-container darker'>\
+        <img src='"+ img +"' alt='Avatar' class='right'>\
+        <p>"+msg+"</p>\
+        <span class='time-left'>"+ getNow() +"</span>\
+        </div>";
+    $('#chattab').append(html);
+    updateScroll();
+}
+
 function getNow(){
     var dt = new Date();
     var time = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
@@ -53,7 +63,7 @@ function messageGenerator() {
     ]
     var random1 = Math.floor(Math.random() * messages.length);
     var random2 = Math.floor(Math.random() * avatars.length);
-    addMessage(messages[random1], avatars[random2]);
+    generateMessage(messages[random1], avatars[random2]);
 }
 
 window.setInterval(function(){
