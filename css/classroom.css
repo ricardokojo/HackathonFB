@@ -8,6 +8,7 @@ section {
     background-color: #ccc;
     border-radius: 2px 0 0 2px;
     height: 90vh;
+    text-align: center;
 }
 
 #chat {
@@ -16,8 +17,9 @@ section {
     height: 90vh;
 }
 
-#Chat {
+#chattab {
     background-color: #fff;
+    overflow: scroll;
 }
 
 html,body
@@ -67,7 +69,7 @@ html,body
 }
 
 /* Style the tab content */
-.tabcontent {
+.tabcontent, .tabcontent2{
     height: 75vh;
     display: none;
     padding: 6px 12px;
@@ -75,7 +77,7 @@ html,body
     border-top: none;
 } 
 
-.tabcontent {
+.tabcontent, .tabcontent2{
     animation: fadeEffect 1s; /* Fading effect takes 1 second */
 }
 
