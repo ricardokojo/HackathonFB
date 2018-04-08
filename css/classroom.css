@@ -65,7 +65,7 @@ html,body
 
 /* Create an active/current tablink class */
 .tab button.active {
-    background-color: #ccc;
+    background-color: #bbb;
 }
 
 /* Style the tab content */

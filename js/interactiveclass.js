@@ -10,14 +10,27 @@ function questionSolved(id) {
     $("#"+id+' img').last().remove();
 }
 
+// esta com duvida
+function changeQuestionBtn(duvida) {
+    if(duvida) {
+        $("#questionBtn").removeClass("btn-danger").addClass("btn-success");
+        $("#questionBtn").html("Entendi!");
+    } else {
+        $("#questionBtn").removeClass("btn-success").addClass("btn-danger");
+        $("#questionBtn").html("Estou com dúvida!");
+    }
+}
+
 var questionbool = false; // esta com duvida
 $("#questionBtn").click(function() {
     if(!questionbool) {
         question("faustop");
         questionbool = true;
+        changeQuestionBtn(questionbool);
     } else {
         questionSolved("faustop");
         questionbool = false;
+        changeQuestionBtn(questionbool);
     }
 });
 
