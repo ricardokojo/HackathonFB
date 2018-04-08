@@ -40,5 +40,5 @@ function openTab(evt, cityName) {
     evt.currentTarget.className += " active";
 }
 
-document.getElementById("defaultOpen1").click();
-document.getElementById("defaultOpen2").click();
+document.getElementById("tabRoom").click();
+document.getElementById("tabChat").click();

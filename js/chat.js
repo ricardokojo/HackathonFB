@@ -32,19 +32,6 @@ function getNow(){
     return(time);
 }
 
-$("#messageInput").keyup(function(event) {
-    if (event.keyCode === 13) {
-        $("#messageBtn").click();
-    }
-});
-
-$("#messageBtn").click(function() {
-    var text = $("#messageInput").val();
-    $("#messageInput").val("");
-    if(text.trim())
-        addMessage(text, "images/faustop.jpg");
-});
-
 function messageGenerator() {
     var messages = [
         "Lorem ipsun e essas paradas",

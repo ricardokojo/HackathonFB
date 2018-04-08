@@ -47,13 +47,6 @@ function removeStudent() {
     $('#classrow div').last().remove();
 }
 
-$("#messageBtn").click(function() {
-    var text = $("#messageInput").val();
-    $("#messageInput").val("");
-    if(text.trim())
-        addMessage(text, "images/faustop.jpg");
-});
-
 var add_or_remove = true;
 window.setInterval(function(){
     if(add_or_remove) {
